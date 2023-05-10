@@ -1,6 +1,4 @@
-//
-// Generated file, do not edit! Created by opp_msgtool 6.0 from Job.msg.
-//
+
 
 #ifndef __RUBIS_JOB_M_H
 #define __RUBIS_JOB_M_H
@@ -35,49 +33,7 @@ class Job;
 #include "QueueingDefs.h"
 // }}
 
-/**
- * Class generated from <tt>Job.msg:21</tt> by opp_msgtool.
- * <pre>
- * //
- * // Job message definition for queueing framework
- * //
- * message Job
- * {
- *     \@customize(true);
- *     int priority;                // queueing priority
- *     simtime_t totalQueueingTime; // total time spent standing in queues
- *     simtime_t totalServiceTime;  // total time spent in servers
- *     simtime_t totalDelayTime;    // total time spent in delay modules
- *     int queueCount;              // the number of queue modules visited by the job
- *     int delayCount;              // the number of delay modules visited by the job
- *     int generation;              // how many times the original ancestor was copied
- * }
- * </pre>
- *
- * Job_Base is only useful if it gets subclassed, and Job is derived from it.
- * The minimum code to be written for Job is the following:
- *
- * <pre>
- * class QUEUEING_API Job : public Job_Base
- * {
- *   private:
- *     void copy(const Job& other) { ... }
 
- *   public:
- *     Job(const char *name=nullptr, short kind=0) : Job_Base(name,kind) {}
- *     Job(const Job& other) : Job_Base(other) {copy(other);}
- *     Job& operator=(const Job& other) {if (this==&other) return *this; Job_Base::operator=(other); copy(other); return *this;}
- *     virtual Job *dup() const override {return new Job(*this);}
- *     // ADD CODE HERE to redefine and implement pure virtual functions from Job_Base
- * };
- * </pre>
- *
- * The following should go into a .cc (.cpp) file:
- *
- * <pre>
- * Register_Class(Job)
- * </pre>
- */
 class RUBIS_API Job_Base : public ::omnetpp::cMessage
 {
   protected:

@@ -1,11 +1,3 @@
-//
-// This file is part of an OMNeT++/OMNEST simulation example.
-//
-// Copyright (C) 2006-2015 OpenSim Ltd.
-//
-// This file is distributed WITHOUT ANY WARRANTY. See the file
-// `license' for details on this and other legal matters.
-//
 
 #ifndef __RUBIS_JOB_H
 #define __RUBIS_JOB_H
@@ -15,24 +7,7 @@
 
 class JobList;
 
-/**
- * We extend the generated Job_Base class with support for split-join, as well
- * as the ability to enumerate all jobs in the system.
- *
- * To support split-join, Jobs manage parent-child relationships. A
- * relationship is created with the makeChildOf() or addChild() methods,
- * and lives until the parent or the child Job is destroyed.
- * It can be queried with the getParent() and getNumChildren()/getChild(k)
- * methods.
- *
- * To support enumerating all jobs in the system, each Job automatically
- * registers itself in a JobList module, if one exist in the model.
- * (If there's no JobList module, no registration takes place.) If there
- * are more than one JobList modules, the first one is chosen.
- * JobList can also be explicitly specified in the Job constructor.
- * The default JobList can be obtained with the JobList::getDefaultInstance()
- * method. Then one can query JobList for the set of Jobs currently present.
- */
+
 
 class Job: public Job_Base
 {
@@ -45,10 +20,6 @@ class Job: public Job_Base
         virtual void parentDeleted();
         virtual void childDeleted(Job *child);
     public:
-        /**
-         * Creates a job with the given name, message kind, and jobList. If
-         * jobList==nullptr, the default one (or none if none exist) will be chosen.
-         */
         Job(const char *name=nullptr, int kind=0, JobList *table=nullptr);
 
         /** Copy constructor */

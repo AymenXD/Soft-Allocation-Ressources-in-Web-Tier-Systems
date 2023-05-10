@@ -5,9 +5,7 @@
 
 using namespace omnetpp;
 
-/**
- * TODO - Generated class
- */
+
 class DBServer : public cSimpleModule
 {
   private:

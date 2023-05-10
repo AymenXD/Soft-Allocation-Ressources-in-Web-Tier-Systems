@@ -12,8 +12,6 @@ void DBServer::handleMessage(cMessage *msg)
 {
 
     if (msg->isSelfMessage()) {
-            // This message was scheduled by the initialize() function
-            // or a previous handleMessage() call
 
             // Send the message out through the output gate
             if(strcmp(msg->getName(), "Job From AppServer") == 0){

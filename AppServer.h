@@ -6,9 +6,6 @@
 
 using namespace omnetpp;
 
-/**
- * TODO - Generated class
- */
 class AppServer : public cSimpleModule
 {
 private:
