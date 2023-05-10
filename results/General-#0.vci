@@ -1,0 +1,37 @@
+file 2558 1683740295                                            
+version 3
+run General-0-20230510-18:38:07-12092
+attr configname General
+attr datetime 20230510-18:38:07
+attr datetimef 20230510-183807
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Topology
+attr processid 12092
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Topology
+config config-recording globalconfig
+config record-eventlog true
+config check-signals true
+
+vector 0 Topology.Client numMsg:vector ETV
+attr recordingmode vector
+attr title "the number of clients"
+vector 1 Topology.MySQLServer ProcessingTime:vector ETV
+attr recordingmode vector
+attr title "Processing Time"
+vector 2 Topology.Client responseTime:vector ETV
+attr recordingmode vector
+attr title "Response Time"
+0	873 462 1 181 0 2.221623837156 20 1 20 210 2870
+1	1335 732 57 308 1.005279300105 3.842308218375 20 1.005279300105 3.842308218375 42.716137040495 105.23151519362
+2	2067 489 104 320 1.541654109431 4.39831815366 20 1 20 210 2870
+
